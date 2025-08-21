@@ -59,5 +59,27 @@ public void testRaizCuadradaNumeroNegativo() {
     // Esto prueba que no se crashea
     assertTrue(Double.isNaN(Math.sqrt(-4)));
 }
+
+  @Test
+    public void testModulo() {
+        double num1 = 10;
+        double num2 = 3;
+        double resultado = num1 % num2;
+        assertEquals(1, resultado);
+    }
+
+    @Test
+    public void testLogaritmoNatural() {
+        double num = Math.E; // ln(e) = 1
+        double resultado = Math.log(num);
+        assertEquals(1, resultado, 0.0001); // tolerancia de error
+    }
+
+    @Test
+    public void testLogaritmoBase10() {
+        double num = 100; // log10(100) = 2
+        double resultado = Math.log10(num);
+        assertEquals(2, resultado, 0.0001);
+    }
 }
 
